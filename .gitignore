@@ -1,0 +1,26 @@
+# Ignore virtual environment
+.venv
+.venv/
+venv/
+
+# Bytecode cache
+__pycache__/
+.__pycache__/
+*.py[cod]
+*.pyo
+
+# pytest cache
+.pytest_cache/
+
+# MacOS system files
+.DS_Store
+
+# VSCode settings
+.vscode/
+
+# Output Logs
+*.log
+
+# Ignore hidden or generated folders
+code_review/
+.utils/
