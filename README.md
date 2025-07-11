@@ -1,56 +1,83 @@
-[![badge](./.github/badges/code_quality.svg)](./code_review/report.json)
-[![badge](./.github/badges/total_errors.svg)](./code_review/report.json)
+# 🎬 Blockbuster Rental System - OOP (Object-Oriented Programming)
 
-# 🧑‍💻 Sigma Labs Coursework
+## 🧾 Overview
 
-## 🛠️ Getting Setup
+This project simulates a simplified Blockbuster-style video rental system using Python and Object-Oriented Programming (OOP) principles. It allows customers to rent and return videos, while tracking due dates and fines based on return time and video release year. 
 
-1. **Fork** this Repository to your Github Account
-2. **Enable Workflows** on your cloned Repository. See the below image for how to do this.
-3. **Clone** your Repository to your laptop
-4. **Open** this folder in VSCode
+It models real-world interactions between customers, videos (DVDs), rentals, and a video store. It includes features like age verification, late return fines, and dynamic video rental management.
 
-<img width="700px" src="https://i.imgur.com/eGyISm9.png" />
+---
 
-## 🗂️ Files Explained
+## 🎯 Project Aims
 
-In this Repository you will find all of the materials for this week of the course.
+The goal was to reinforce core OOP concepts such as encapsulation, inheritance, polymorphism, and clean code practices through a hands-on mini-system.
 
-As well as your coursework files you'll find some additional files
+- Practice and demonstrate object-oriented design using Python classes.
+- Implement real-world business logic like due dates and fines.
+- Follow clean coding principles and Python standards.
+- Build testable code using `pytest` and TDD methodology.
 
-- `README.md`
-  - This is the file you are currently reading
-- `.gitignore`
-  - This file is used to tell Git what files to ignore for any changes. This can be safely ignored.
-- `.prettierrc`
-  - This file is used to configure Prettier, an automated formatter that we suggest you install. This can be safely ignored.
-- `.eslintrc.json` and `pylintrc`
-  - Used to ensure that your code is following good style guides
+---
 
-You'll also find some folders:
+## Key Concepts
 
-- `.utils` folder
-  - Some config files to help us to test your code
-- `.github` folder
-  - Configuration files used by Github
-- `code_review` folder
-  - Outputs of our automated code reviews. [See below](#code-review-folder) for more details.
-- `.vscode` folder
-  - This folder contains settings and config files for VSCode. They can be safely ignored.
+- **OOP Design**: Classes include `Customer`, `Video`, `Rental`, `VideoStore`, and more.
+- **Inheritance**: Specialized classes like `DVD` and `VendingMachine` inherit from base classes.
+- **Data Validation**: Age checks and rental eligibility enforced.
+- **Exception Handling**: Graceful error messages for invalid operations.
+- **Testing**: All core functionality is tested using Pytest.
 
-Any other files or folder found here **are** relevant for your coursework.
+---
 
-## ✅ Code Review Folder
+## Features
 
-Every time you commit your code to Github, we will run a suite of tests to ensure that you code is of high quality.
+- `Video` class: represents a video with title, release year, and daily rental cost.
+- `Customer` class: includes name, date of birth, age calculation, and outstanding fines.
+- `Rental` class: manages rentals with dates and video associations.
+- `VideoStore` class: provides methods to rent and return videos, with late fine logic.
+- Fine calculation: based on how late a video is returned and whether it's a new release.
 
-It's worth noting - this **does not evaluate the quality of your solution**. Think of it as evaluating the 'grammar' and 'spelling' of your code rather than the actual quality of the work you've done.
+---
 
-Inside this folder you'll find two files
+## 📁Project Structure
 
-- `report.txt`
-  - A plain text version of your code quality
-- `report.json`
-  - A computer-friendly version of your code quality, including your 'Code Quality Score'
+- [blockbuster/]
+    - `blockbuster_oop.py`: Core class implementations
+    - `test_blockbuster_challenge.py`: Unit tests for foundational features
+    - `test_blockbuster_trainee.py`: More advanced scenarios and edge cases
 
-Consistently keeping your score high will make your code easier to read and understand.
+- `requirements.txt`: Project dependencies
+- `.gitignore`: Ignore .venv, pycache, etc.
+
+---
+
+## ⚙️ Getting Setup
+
+1. **Clone the repo**
+- `git clone https://github.com/yourusername/Blockbuster-Rental-System-OOP.git`
+- `cd Blockbuster-Rental-System-OOP`
+
+2. **Create and activate a virtual environment**
+- `python -m venv .venv`
+- `source .venv/bin/activate` 
+  - On Windows: `.venv\Scripts\activate`
+
+3. **Install dependencies**
+- `pip install -r requirements.txt`
+
+--- 
+
+## 🧪 Running the Tests
+
+Make sure your virtual environment is active. Then run:
+- `pytest test_blockbuster_challenge.py`
+- `pytest test_blockbuster_trainee.py`
+
+
+# Sample Features
+✅ Add customers with validated date of birth
+✅ Rent and return videos with due date tracking
+✅ Calculate fines for late returns
+✅ Separate logic for new releases
+✅ Unit tests for all major flows
+
